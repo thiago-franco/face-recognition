@@ -11,7 +11,17 @@ Install the project requirements by running
 
 `pip install -r requirements.txt`
 
-Launch the jupyter notebook and enjoy :) 
+To evaluate a model, run
+
+`python face_recognition.py eval [path to dataset directory]`
+
+e.g. `python face_recognition.py eval ./datasets/easy`
+
+To recognize an image based on a model for a given dataset, run
+
+`python face_recognition.py recl [path to dataset directory] [path to image to be recognized]`
+
+For a more interactive experience, launch the `jupyter notebook` and enjoy :) 
 
 Alternatively, try lauching the notebook through Binder (it may take a while to load):
 
