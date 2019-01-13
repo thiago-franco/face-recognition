@@ -19,7 +19,7 @@ e.g. `python face_recognition.py eval ./datasets/easy`
 
 To recognize an image based on a model for a given dataset, run
 
-`python face_recognition.py recl [path to dataset directory] [path to image to be recognized]`
+`python face_recognition.py rec [path to dataset directory] [path to image to be recognized]`
 
 For a more interactive experience, launch the `jupyter notebook` and enjoy :) 
 
