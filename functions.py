@@ -10,6 +10,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.svm import SVC
 from sklearn.neural_network import MLPClassifier
 from sklearn.metrics import confusion_matrix
+from similarity_classifier import SimilarityClassifier
 
 SUPORTED_FORMATS = ['jpg', 'jpeg', 'gif', 'png']
 
