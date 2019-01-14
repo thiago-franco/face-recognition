@@ -22,6 +22,9 @@ def get_file_names(path):
 def get_image_label(img_name):
     return img_name.split('/')[-1].split('-')[0]
 
+def get_image_name(img_name):
+    return img_name.split('/')[-1].split('.')[0]
+
 def load_image(file_name):
     return cv2.cvtColor(cv2.imread(file_name), cv2.COLOR_BGR2RGB)
 

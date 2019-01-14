@@ -7,7 +7,6 @@ def main():
     if(action == 'eval'):
         evaluate_recognition(path, LogisticRegression())
     elif(action == 'rec'):
-        image_to_rec = sys.argv[1:][2]
         X, y = load_dataset(path)
         pca = PCA()
         X = pca.fit_transform(X)
@@ -15,7 +14,14 @@ def main():
         print('Recognition Rate: %s' % score)
         print('Confuision Matrix:')
         print(cm)
-        act, pred = recognize_image(image_to_rec, model, pca)
-        print('Face recognized as: %s' % pred)
+        images_path = sys.argv[1:][2]
+        files = get_file_names(images_path)
+        correct = 0
+        for file in files:
+            act, pred = recognize_image(file, model, pca)
+            if act == pred:
+                correct += 1
+            print('Face %s recognized as: %s' % (get_image_name(file), pred))
+        print("%s (%s/%s) correctly classified." % (correct/len(files), correct, len(files)))
 
 main()
